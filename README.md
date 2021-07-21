@@ -35,4 +35,3 @@ Microsoft and any contributors reserve all others rights, whether under their re
 or trademarks, whether by implication, estoppel or otherwise.
 
 
-This is testing the pipeline
