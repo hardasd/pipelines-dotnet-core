@@ -33,7 +33,6 @@ stages:
         deploy:
           steps:
           - script: dotnet build --configuration $(buildConfiguration)
-          displayName: 'dotnet build $(buildConfiguration)'
 - stage: Deploy
   jobs:
   - deployment: DeployTest_One
@@ -48,4 +47,3 @@ stages:
         deploy:
           steps:
           - script: dotnet build --configuration $(buildConfiguration)
-          displayName: 'dotnet build $(buildConfiguration)'
