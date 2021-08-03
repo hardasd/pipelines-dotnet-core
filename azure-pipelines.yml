@@ -13,13 +13,13 @@ variables:
   buildConfiguration: 'Release'
   
 stages:
-- stage: 46Test
+- stage: Test_Build
   jobs:
   - job:
     steps:
     - script: dotnet build --configuration $(buildConfiguration)
     displayName: 'dotnet build $(buildConfiguration)'
-- stage: SIT
+- stage: SIT_Build
   jobs:
   - job:
     steps:
