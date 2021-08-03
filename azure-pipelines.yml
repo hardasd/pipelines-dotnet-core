@@ -32,7 +32,7 @@ stages:
       runOnce:
         deploy:
           steps:
-          - script: dotnet build --configuration $(buildConfiguration)
+          - script: echo Hello Test
 - stage: Deploy_SIT
   jobs:
   - deployment: DeploySIT
@@ -46,4 +46,4 @@ stages:
       runOnce:
         deploy:
           steps:
-          - script: dotnet build --configuration $(buildConfiguration)
+          - script: echo Hello SIT
