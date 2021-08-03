@@ -25,3 +25,9 @@ stages:
     steps:
     - script: dotnet build --configuration $(buildConfiguration)
     displayName: 'dotnet build $(buildConfiguration)'
+- stage: PT_Build
+  jobs:
+  - job:
+    steps:
+    - script: dotnet build --configuration $(buildConfiguration)
+    displayName: 'dotnet build $(buildConfiguration)'
