@@ -19,7 +19,7 @@ stages:
     steps:
     - script: dotnet build --configuration $(buildConfiguration)
     displayName: 'dotnet build $(buildConfiguration)'
-- stage: Deploy
+- stage: Deploy_Test
   jobs:
   - deployment: DeployTest
     displayName: deploy Test App
@@ -33,15 +33,15 @@ stages:
         deploy:
           steps:
           - script: dotnet build --configuration $(buildConfiguration)
-- stage: Deploy
+- stage: Deploy_SIT
   jobs:
-  - deployment: DeployTest_One
-    displayName: deploy Test App_One
+  - deployment: DeploySIT
+    displayName: deploy SIT
     pool:
       vmImage: ubuntu-latest
     timeoutInMinutes: "1"       
     cancelTimeoutInMinutes: "1" 
-    environment: 'Stage'
+    environment: 'SIT'
     strategy:
       runOnce:
         deploy:
